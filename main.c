@@ -1,14 +1,30 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-	int input, n = 0, sum = 0;
-	printf("Enter integers here: ");
-	while (scanf("%d", &input) == 1){
-		sum += input;
-		n++;
+	int n, i;
+	printf("Enter n: ");
+	if (scanf("%d", &n) != 1 && n <= 0){
+		printf("Invalid input format!");
+		exit(EXIT_FAILURE);
 	}
-	printf("Sum of itegers: %d\n", sum);
-	printf("Average of integers: %.2f\n", 1.0*sum/n);
-  	return 0;
+	for (i=1; i<=n; i++){
+		if (i % 12 == 0){
+			printf("DuckGoose\n");
+		}
+		else if (i % 4 == 0){
+			printf("Duck\n");
+		}
+		else if (i % 6 == 0){
+			printf("Goose\n");
+		}
+		else {
+			printf("%d\n", i);
+		}
+		
+		
+	}
+	return 0;
 }
+// alias edit="open ~/.bash_profile"
